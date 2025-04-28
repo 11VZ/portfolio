@@ -325,6 +325,81 @@ html, body, #root, .showcase-root {
   border-color: #fff;
 }
 
+.discord-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 30, 0.56);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.18s;
+}
+
+.discord-popup {
+  background: #23243a;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 #a259f755, 0 2px 16px 0 #23294622;
+  padding: 2.2rem 2.5rem 1.6rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 270px;
+  max-width: 90vw;
+  border: 2px solid #a259f7;
+  animation: popupScaleIn 0.22s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.discord-popup-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #a259f7;
+  margin-bottom: 0.7rem;
+}
+
+.discord-popup-username {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #eaeaea;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.discord-popup p {
+  color: #b5b5b5;
+  font-size: 1.04rem;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+
+.discord-popup-close {
+  background: #a259f7;
+  color: #fff;
+  border: none;
+  border-radius: 1.1rem;
+  padding: 0.55rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 #23294622;
+  transition: background 0.18s, color 0.18s;
+}
+
+.discord-popup-close:hover {
+  background: #fff;
+  color: #a259f7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popupScaleIn {
+  0% { transform: scale(0.88); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 @media (max-width: 900px) {
   .redesigned-projects.centered-projects {
     flex-direction: column;

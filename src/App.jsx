@@ -1,10 +1,12 @@
 import './App.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+
+  const [showDiscordPopup, setShowDiscordPopup] = useState(false);
 
   const scrollTo = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -169,9 +171,19 @@ function App() {
         <h2>Contact</h2>
         <div className="social-links">
           <a href="https://github.com/11VZ" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://discord.gg/448BugtRcE" target="_blank" rel="noopener noreferrer">Discord</a>
+          <a href="#" onClick={e => { e.preventDefault(); setShowDiscordPopup(true); }}>Discord</a>
           <a href="mailto:totorp12@hotmail.com">Email</a>
         </div>
+        {showDiscordPopup && (
+          <div className="discord-popup-overlay" onClick={() => setShowDiscordPopup(false)}>
+            <div className="discord-popup" onClick={e => e.stopPropagation()}>
+              <span className="discord-popup-title">Discord</span>
+              <span className="discord-popup-username">11vzmc</span>
+              <p>Add or message me on Discord!</p>
+              <button className="discord-popup-close" onClick={() => setShowDiscordPopup(false)}>Close</button>
+            </div>
+          </div>
+        )}
       </section>
       <footer className="showcase-footer">
         <span>&copy; 2025 Tobin. Made with love.</span>
