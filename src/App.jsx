@@ -165,6 +165,26 @@ function App() {
 
             </div>
           </div>
+          <div
+            className="redesigned-project centered-project-card"
+            onClick={() => window.open('https://filehost-alpha.vercel.app/', '_blank')}
+            tabIndex={0}
+            role="button"
+            aria-label="Open Filehost"
+            style={{ cursor: 'pointer' }}
+          >
+            <div className="project-header centered-header">
+              <h3>Filehost Website</h3>
+            </div>
+            <p>Host files for free using my website. One of my more complex projects.</p>
+            <div className="project-langs">
+              <span className="lang-badge">SQL</span>
+              <span className="lang-badge">Vite</span>
+              <span className="lang-badge">Javascript</span>
+              <span className="lang-badge">HTML/CSS</span>
+
+            </div>
+          </div>
         </div>
       </section>
       <section className="showcase-section showcase-contact" ref={contactRef} id="contact">
