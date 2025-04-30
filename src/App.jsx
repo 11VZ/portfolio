@@ -51,6 +51,7 @@ function App() {
           <span className="skill-badge">Ruby</span>
           <span className="skill-badge">OpenGL</span>
           <span className="skill-badge">Lua</span>
+          <span className="skill-badge">FishScript</span>
         </div>
       </section>
       <section className="showcase-section showcase-projects" ref={projectsRef} id="projects">
@@ -106,6 +107,7 @@ function App() {
             <div className="project-langs">
               <span className="lang-badge">Java</span>
               <span className="lang-badge">OpenGL</span>
+              <span className="lang-badge">Bukkit API</span>
             </div>
           </div>
           <div
@@ -167,6 +169,24 @@ function App() {
           </div>
           <div
             className="redesigned-project centered-project-card"
+            onClick={() => window.open('https://github.com/11VZ/FishScript', '_blank')}
+            tabIndex={0}
+            role="button"
+            aria-label="Open FishScript"
+            style={{ cursor: 'pointer' }}
+          >
+            <div className="project-header centered-header">
+              <h3>FishScript Language</h3>
+            </div>
+            <p>Custom programing language based on Python and Java.</p>
+            <div className="project-langs">
+              <span className="lang-badge">Python</span>
+              <span className="lang-badge">Batch</span>
+              <span className="lang-badge">FishScript</span>
+            </div>
+          </div>
+          <div
+            className="redesigned-project centered-project-card"
             onClick={() => window.open('https://filehost-alpha.vercel.app/', '_blank')}
             tabIndex={0}
             role="button"
@@ -183,6 +203,23 @@ function App() {
               <span className="lang-badge">Javascript</span>
               <span className="lang-badge">HTML/CSS</span>
 
+            </div>
+          </div>
+          <div
+            className="redesigned-project centered-project-card"
+            onClick={() => window.open('https://github.com/11VZ/HavocCore', '_blank')}
+            tabIndex={0}
+            role="button"
+            aria-label="Open HavocCore"
+            style={{ cursor: 'pointer' }}
+          >
+            <div className="project-header centered-header">
+              <h3>HavocCore</h3>
+            </div>
+            <p>Custom Minecraft plugin built to test advanced Java features.</p>
+            <div className="project-langs">
+              <span className="lang-badge">Java</span>
+              <span className="lang-badge">Bukkit API</span>
             </div>
           </div>
         </div>
