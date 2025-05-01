@@ -205,23 +205,6 @@ function App() {
 
             </div>
           </div>
-          <div
-            className="redesigned-project centered-project-card"
-            onClick={() => window.open('https://github.com/11VZ/HavocCore', '_blank')}
-            tabIndex={0}
-            role="button"
-            aria-label="Open HavocCore"
-            style={{ cursor: 'pointer' }}
-          >
-            <div className="project-header centered-header">
-              <h3>HavocCore</h3>
-            </div>
-            <p>Custom Minecraft plugin built to test advanced Java features.</p>
-            <div className="project-langs">
-              <span className="lang-badge">Java</span>
-              <span className="lang-badge">Bukkit API</span>
-            </div>
-          </div>
         </div>
       </section>
       <section className="showcase-section showcase-contact" ref={contactRef} id="contact">
