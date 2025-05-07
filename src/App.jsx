@@ -59,7 +59,6 @@ function App() {
           <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</button></li>
           <li><button onClick={() => scrollTo(aboutRef)}>About</button></li>
           <li><button onClick={() => scrollTo(projectsRef)}>Projects</button></li>
-          <li><button onClick={() => scrollTo(commissionsRef)}>Commissions</button></li>
           <li><button onClick={() => scrollTo(contactRef)}>Contact</button></li>
         </ul>
       </nav>
