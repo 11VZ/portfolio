@@ -24,7 +24,7 @@ function App() {
     setSubmissionStatus('submitting');
     
     try {
-      const response = await fetch('https://localhost:3000/api/commission', {
+      const response = await fetch('https://portfolio-d8qf.onrender.com/api/commission', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
