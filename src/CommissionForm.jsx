@@ -87,9 +87,6 @@ function CommissionForm() {
           <option value="Minecraft">Minecraft Development</option>
           <option value="Discord Bot">Discord Bot</option>
           <option value="Web Development">Web Development</option>
-          <option value="Game Development">Game Development</option>
-          <option value="FRC Robotics">FRC Robotics</option>
-          <option value="Custom Language">Custom Language Development</option>
           <option value="Other">Other (specify in description)</option>
         </select>
       </div>
@@ -125,7 +122,7 @@ function CommissionForm() {
       )}
       
       <div className="form-group">
-        <label htmlFor="commission-description">Project Description</label>
+        <label htmlFor="commission-description">Description</label>
         <textarea 
           id="commission-description" 
           value={commissionDescription} 
