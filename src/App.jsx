@@ -1,15 +1,55 @@
 import './App.css';
 import { useRef, useState } from 'react';
+import CommissionForm from './CommissionForm';
 
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const commissionsRef = useRef(null);
 
   const [showDiscordPopup, setShowDiscordPopup] = useState(false);
+  const [commissionType, setCommissionType] = useState('');
+  const [commissionDescription, setCommissionDescription] = useState('');
+  const [commissionEmail, setCommissionEmail] = useState('');
+  const [commissionBudget, setCommissionBudget] = useState('');
+  const [submissionStatus, setSubmissionStatus] = useState('');
 
   const scrollTo = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleCommissionSubmit = async (e) => {
+    e.preventDefault();
+    setSubmissionStatus('submitting');
+    
+    try {
+      const response = await fetch('http://localhost:3000/api/commission', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: commissionType,
+          description: commissionDescription,
+          email: commissionEmail,
+          budget: commissionBudget
+        }),
+      });
+      
+      if (response.ok) {
+        setSubmissionStatus('success');
+        setCommissionType('');
+        setCommissionDescription('');
+        setCommissionEmail('');
+        setCommissionBudget('');
+      } else {
+        setSubmissionStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting commission:', error);
+      setSubmissionStatus('error');
+    }
   };
 
   return (
@@ -19,6 +59,7 @@ function App() {
           <li><button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</button></li>
           <li><button onClick={() => scrollTo(aboutRef)}>About</button></li>
           <li><button onClick={() => scrollTo(projectsRef)}>Projects</button></li>
+          <li><button onClick={() => scrollTo(commissionsRef)}>Commissions</button></li>
           <li><button onClick={() => scrollTo(contactRef)}>Contact</button></li>
         </ul>
       </nav>
@@ -206,6 +247,11 @@ function App() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="showcase-section showcase-commissions" ref={commissionsRef} id="commissions">
+        <h2>Commissions</h2>
+        <p>Interested in working with me? Fill out the form below to request a commission.</p>
+        <CommissionForm />
       </section>
       <section className="showcase-section showcase-contact" ref={contactRef} id="contact">
         <h2>Contact</h2>
