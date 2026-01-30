@@ -227,22 +227,32 @@ function App() {
           </div>
           <div
             className="redesigned-project centered-project-card"
+            onClick={() => window.open('https://frc.11vz.dev', '_blank')}
+            tabIndex={0}
+            role="button"
+            aria-label="Open Scouting Tool"
+            style={{ cursor: 'pointer' }}
+          >
+            <div className="project-header centered-header">
+              <h3>FRC Scouting Tool</h3>
+            </div>
+            <p>Best scouting tool for FRC 2026</p>
+            <div className="project-langs">
+              <span className="lang-badge">SQL</span>
+              <span className="lang-badge">Python</span>
+              <span className="lang-badge">Javascript</span>
+              <span className="lang-badge">HTML/CSS</span>
+              <span className="lang-badge">Fullstack</span>
+            </div>
+          </div>
+          <div
+            className="redesigned-project centered-project-card"
             onClick={() => window.open('https://filehost-alpha.vercel.app/', '_blank')}
             tabIndex={0}
             role="button"
             aria-label="Open Filehost"
             style={{ cursor: 'pointer' }}
           >
-            <div className="project-header centered-header">
-              <h3>FRC Scouting Tool</h3>
-            </div>
-            <p>Best virtual scouting tool for FRC 2026</p>
-            <div className="project-langs">
-              <span className="lang-badge">Python</span>
-              <span className="lang-badge">HTML, CSS, JS</span>
-              <span className="lang-badge">Fullstack</span>
-              <span className="lang-badge">SQL</span>
-            </div>
             <div className="project-header centered-header">
               <h3>Filehost Website</h3>
             </div>
