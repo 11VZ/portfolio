@@ -234,6 +234,16 @@ function App() {
             style={{ cursor: 'pointer' }}
           >
             <div className="project-header centered-header">
+              <h3>FRC Scouting Tool</h3>
+            </div>
+            <p>Best virtual scouting tool for FRC 2026</p>
+            <div className="project-langs">
+              <span className="lang-badge">Python</span>
+              <span className="lang-badge">HTML, CSS, JS</span>
+              <span className="lang-badge">Fullstack</span>
+              <span className="lang-badge">SQL</span>
+            </div>
+            <div className="project-header centered-header">
               <h3>Filehost Website</h3>
             </div>
             <p>Host files for free using my website. One of my more complex projects.</p>
