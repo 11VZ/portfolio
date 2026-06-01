@@ -73,7 +73,7 @@ function App() {
       <section className="showcase-section showcase-about" ref={aboutRef} id="about">
         <h2>About Me</h2>
         <p>
-          I’m Tobin, a developer with over 9 years of experience building advanced applications for games, enterprises, and startups. Ever since I first touched a computer, I’ve been fascinated by the ability to turn ideas into reality and build things that make a difference. My passion is sharing this journey, whether by teaching others how to develop anything they dream of, or bringing someone’s dream to life myself.
+          I’m Tobin, a developer & CEO of FernHost with over 12 years of experience building advanced applications for games, enterprises, and startups. Ever since I first touched a computer, I’ve been fascinated by the ability to turn ideas into reality and build things that make a difference. My passion is sharing this journey, whether by teaching others how to develop anything they dream of, or bringing someone’s dream to life myself.
         </p>
       </section>
       <section className="showcase-section showcase-skills" id="skills">
